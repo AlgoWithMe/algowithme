@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestMoreMaxProduct(t *testing.T) {
+func TestMaxProduct(t *testing.T) {
 	tests := map[string]struct {
 		nums     []int
 		expected int
