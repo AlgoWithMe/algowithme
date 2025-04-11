@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         go-version: [ '1.22.0' ]
-        changed-files: ${{ fromJSON(needs.paths-filter.outputs.go_files) }} 
+        changed-files: ${{ fromJSON(needs.paths-filter.outputs.files) }}
     steps:
     - uses: actions/checkout@v2
     - name: Setup Go ${{ matrix.goversion }}
@@ -31,5 +31,6 @@ jobs:
         go-version: '1.22.0'
     - name: go tests
       run: |
+        echo ${{matrix.changed-files}}
         cd $(dirname ${{matrix.changed-files}}) && go test ./... -v
 
