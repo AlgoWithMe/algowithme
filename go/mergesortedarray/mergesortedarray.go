@@ -34,4 +34,5 @@ func MergeSortedArrays(nums1 []int, m int, nums2 []int, n int) {
 	// No need to handle if nums1 still has elements (nums2 is exhausted) because the initial
 	// m elements of nums1 are already in the correct place.
 	// (delete me)
+	// (also delete me)
 }
