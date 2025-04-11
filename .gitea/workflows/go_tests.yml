@@ -28,7 +28,7 @@ jobs:
     - name: Setup Go ${{ matrix.goversion }}
       uses: actions/setup-go@v5
       with:
-        go-version: ${{ matrix.go-version }}
+        go-version: '1.22.0'
     - name: go tests
       run: |
         cd $(dirname ${{matrix.changed-files}}) && go test ./... -v
