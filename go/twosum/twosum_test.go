@@ -31,7 +31,7 @@ func TestTwoSum(t *testing.T) {
 				t.Fatal(fmt.Sprintf("output of TwoSum had len %d but expected has len %d", len(out), len(test.expected)))
 			}
 			for _, expected := range test.expected {
-				if !slices.Contains[[]int](out, expected) {
+				if !slices.Contains(out, expected) {
 					t.Fatal(fmt.Sprintf("output does not have %d like it should", expected))
 				}
 			}
